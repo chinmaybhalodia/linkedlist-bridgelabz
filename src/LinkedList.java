@@ -7,6 +7,18 @@ public class LinkedList<T> {
         this.tail = null;
     }
 
+    // UC5: method to delete first node in linklist
+    public void deleteFirst() {
+        // if linkedlist is empty
+        if (head == null) {
+            return;
+        }
+
+        Node<T> temp = head.next;
+        head.next = null;
+        head = temp;
+    }
+
     // UC4: method to add new node at given index in linkedlist
     public void insertAt(int index, T data) {
         // check if index is valid
