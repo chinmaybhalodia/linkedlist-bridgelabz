@@ -7,6 +7,19 @@ public class LinkedList<T> {
         this.tail = null;
     }
 
+    // method to add new node at last of linkedlist
+    public void add(T data) {
+        Node<T> node = new Node<>(data);
+        // if linkedlist is empty
+        if (head == null) {
+            head = node;
+            tail = node;
+        } else {
+            tail.next = node;
+            tail = node;
+        }
+    }
+
     // method to add new node at head of linkedlist
     public void addFirst(T data) {
         Node<T> node = new Node<>(data);

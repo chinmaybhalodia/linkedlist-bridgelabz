@@ -2,9 +2,9 @@ public class App {
     public static void main(String[] args) throws Exception {
         // UC2: creating linkedlist and adding nodes
         LinkedList<Integer> list = new LinkedList<>();
-        list.addFirst(70);
-        list.addFirst(30);
-        list.addFirst(56);
+        list.add(56);
+        list.add(30);
+        list.add(70);
         System.out.println(list);
     }
 }
