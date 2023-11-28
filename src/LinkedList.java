@@ -7,7 +7,30 @@ public class LinkedList<T> {
         this.tail = null;
     }
 
-    // UC5: method to delete first node in linklist
+    // UC6: method to delete last node in linkedlist
+    public void deleteLast() {
+        // if linkedlist is empty
+        if (head == null) {
+            return;
+        }
+
+        Node<T> temp = head;
+
+        // check if there is only one node
+        if (temp.next == null) {
+            head = null;
+            tail = null;
+            return;
+        }
+
+        while (temp.next != tail) {
+            temp = temp.next;
+        }
+        temp.next = null;
+        tail = temp;
+    }
+
+    // UC5: method to delete first node in linkedlist
     public void deleteFirst() {
         // if linkedlist is empty
         if (head == null) {

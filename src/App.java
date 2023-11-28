@@ -7,8 +7,8 @@ public class App {
         list.add(70);
         System.out.println(list);
 
-        // UC5: deleting the first element of linkedlist
-        list.deleteFirst();
+        // UC6: deleting the last element of linkedlist
+        list.deleteLast();
         System.out.println(list);
     }
 }
