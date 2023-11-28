@@ -10,5 +10,9 @@ public class App {
         // UC8: insert node 40 after node 30
         list.insertAfterNode(30, 40);
         System.out.println(list);
+
+        // UC9: delete node 40
+        list.deleteNode(40);
+        System.out.println(list);
     }
 }

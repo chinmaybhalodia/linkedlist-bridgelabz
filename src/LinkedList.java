@@ -7,6 +7,33 @@ public class LinkedList<T> {
         this.tail = null;
     }
 
+    // UC9: delete given node from linkedlist
+    public void deleteNode(T data) {
+        // if linkedlist is empty
+        if (head == null) {
+            return;
+        }
+
+        // if node is head or tail
+        if (head.data.equals(data)) {
+            this.deleteFirst();
+            return;
+        }
+
+        if (tail.data.equals(data)) {
+            this.deleteLast();
+            return;
+        }
+
+        // if the node is between head and tail
+        Node<T> temp = head;
+        while (temp.next != null && !temp.next.data.equals(data)) {
+            temp = temp.next;
+        }
+
+        temp.next = temp.next.next;
+    }
+
     // UC8: method to add node after a given node
     public void insertAfterNode(T source_node_data, T new_node_data) {
         int index = this.search(source_node_data);
