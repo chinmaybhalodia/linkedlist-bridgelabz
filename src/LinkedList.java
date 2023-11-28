@@ -7,6 +7,16 @@ public class LinkedList<T> {
         this.tail = null;
     }
 
+    // UC8: method to add node after a given node
+    public void insertAfterNode(T source_node_data, T new_node_data) {
+        int index = this.search(source_node_data);
+        if (index == -1) {
+            System.out.println("Source node not found.");
+            return;
+        }
+        this.insertAt(index + 1, new_node_data);
+    }
+
     // UC7: method to search node in linkedlist
     public int search(T data) {
         // if linkedlist is empty

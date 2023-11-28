@@ -7,7 +7,8 @@ public class App {
         list.add(70);
         System.out.println(list);
 
-        // UC7: search node with value 30 in linkedlist
-        System.out.println(list.search(30));
+        // UC8: insert node 40 after node 30
+        list.insertAfterNode(30, 40);
+        System.out.println(list);
     }
 }
