@@ -7,8 +7,7 @@ public class App {
         list.add(70);
         System.out.println(list);
 
-        // UC6: deleting the last element of linkedlist
-        list.deleteLast();
-        System.out.println(list);
+        // UC7: search node with value 30 in linkedlist
+        System.out.println(list.search(30));
     }
 }

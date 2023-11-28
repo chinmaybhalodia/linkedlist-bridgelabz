@@ -7,6 +7,25 @@ public class LinkedList<T> {
         this.tail = null;
     }
 
+    // UC7: method to search node in linkedlist
+    public int search(T data) {
+        // if linkedlist is empty
+        if (head == null) {
+            return -1;
+        }
+
+        Node<T> temp = head;
+        int index = 0;
+        while (temp != null) {
+            if (temp.data.equals(data)) {
+                return index;
+            }
+            index++;
+            temp = temp.next;
+        }
+        return -1;
+    }
+
     // UC6: method to delete last node in linkedlist
     public void deleteLast() {
         // if linkedlist is empty
